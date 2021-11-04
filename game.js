@@ -13,7 +13,7 @@ function Bear() {
         this.x += this.dBear * xDir;
         this.y += this.dBear * yDir;
         this.display();
-   };
+   }
    
     this.display = function() {
         this.htmlElement.style.left = this.x + "px";
@@ -36,10 +36,13 @@ function Bear() {
         if (this.y < 0) this.y = 0;
         
         if (this.y > h - ih) this.y = h - ih;
-    };
+    }
        
+    this.setSpeed = function() {
 
-    ;
+    }
+
+    
 }
 
  function start() {
