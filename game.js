@@ -38,12 +38,20 @@ function Bear() {
         if (this.y > h - ih) this.y = h - ih;
     }
        
-    this.setSpeed = function() {
-
+    function setSpeed() {
+        
+        let bearSpeed = document.getElementById("bearSpeed").value;
+        console.log(bearSpeed);
+        return bearSpeed;
     }
 
     
+
 }
+
+    function getRandomInt(a) {
+        return 10;
+    }
 
  function start() {
     //create bear
@@ -51,12 +59,15 @@ function Bear() {
 
     // Add an event listener to the keypress event.
     document.addEventListener("keydown", moveBear, false);
-
+    
     //create new array for bees
 
     bees = new Array();
 
     //create bees
+
+    //take start time
+    lastStingTime = new Date();
 
     makeBees();
     }
@@ -209,9 +220,11 @@ class Bee {
     //move the bees randomly
     moveBees();
     //use a fixed update period
-    let period = 10;//modify this to control refresh period
+    let period = document.getElementById("updateTimer");//modify this to control refresh period
     //update the timer for the next move
     updateTimer = setTimeout('updateBees()', period);
+
+
    }
    
   
